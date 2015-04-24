@@ -51,6 +51,26 @@
 \newfont{\crnotice}{ptmr8t at 8pt}
 \newfont{\ninept}{ptmr8t at 9pt}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% IEEE Formatting - Uncomment to get IEEE-Style Section headings
+%%%
+
+%
+% \renewcommand{\thesection}{\Roman{section}} 
+% \renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+%
+% \titleformat{\section}%                     % IEEE/ACM: caps + period
+%   {\centering\sc}{\roman{section}.\quad}{0pt}{}
+%
+% \titleformat{\subsection}%                     % IEEE/ACM: caps + period
+%   {\flushleft\it}{\Alph{subsection}.\quad}{0pt}{}
+%
+% \titleformat{\subsubsection}%                     % IEEE/ACM: caps + period
+%   {\flushleft\it}{\Alph{subsection}.\arabic{subsubsection}.\quad}{0pt}{}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%
@@ -74,6 +94,9 @@
 %    left=1.0in,right=1.0in,top=1.0in,
 %    footskip=0.5in,bottom=1.0in,   % Room for page numbers
 %    columnsep=0.25in
+% IEEE
+%            left=0.75in,right=0.75in,top=0.75in, bottom=1in,
+%            columnsep=0.2in
 % Custom
 %    left=1.5in,right=1.5in,top=1.0in,
 %    footskip=0.5in,bottom=1.0in,   % Room for page numbers
