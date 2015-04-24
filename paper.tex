@@ -1,0 +1,62 @@
+\documentclass[10pt,twocolumn]{confpaper}
+
+%%%%%%%%%%%%%%%%%%%%  INCLUDES  %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%  LOCALS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\system}{{\em NetASM}}
+
+%%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
+
+\date{}
+\title{\ttlfnt{
+\TITLE}}
+\author{
+\aufnt{\AUTHORS} \\
+\affaddr{Affiliation}
+}
+
+%%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+%\AcmCopyright
+%\ToAppear
+
+\begin{sloppypar}
+
+\input{abstract}
+
+\ifthenelse{\equal{\onlyAbstract}{no}}{% !onlyAbstract
+
+\input{introduction}
+
+\input{related}
+
+\balance\input{conclusion}\label{lastpage}
+
+\end{sloppypar}
+
+%\vspace{-0.1in}
+%\section*{Acknowledgments}
+% Comments for people we need to acknowledge in the final version.
+
+\pagebreak
+
+\small
+%\setlength{\bibsep}{0pt}
+\setlength{\parskip}{-1pt}
+\setlength{\itemsep}{-1pt}
+% \footnotesize % SPACE
+\balance\bibliography{paper}
+\bibliographystyle{abbrv}
+%\bibliographystyle{abbrvnat_noaddr} % SPACE
+%\theendnotes % ENDNOTES
+}{% onlyAbstract
+}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%  END OF DOCUMENT  %%%%%%%%%%%%%%%%%%%%
