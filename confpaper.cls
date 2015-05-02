@@ -215,9 +215,9 @@
   \ifcase #1 %
     (Not cited.) %
   \or
-    {\small\sffamily (Cited on page~#2.)}%
+    {\small (Cited on page~#2.)}%
   \else
-    {\small\sffamily (Cited on pages~#2.)}%
+    {\small (Cited on pages~#2.)}%
   \fi
 }
 \renewcommand*{\backrefsep}{, }
