@@ -301,8 +301,6 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 }
 
 \newcommand{\xxx}[1]{\note{red}{#1}}
-\newcommand{\ms}[1]{\note{blue}{Shahbaz: #1}}
-\newcommand{\nf}[1]{\note{green}{Nick: #1}}
 \newcommand{\todo}[1]{\note{red}{\bf #1}}
 
 %%%
@@ -312,7 +310,7 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 \newcommand{\eg}{{\em e.g.}}
 \newcommand{\ea}{{\em et al.}}
 \newcommand{\fp}{\vspace*{0.05in}\noindent}
-\newcommand{\name}{NAME}
+\newcommand{\name}{NAME\xspace}
 
 %%%
 %%%  Theorems
@@ -339,5 +337,6 @@ Copyright 200X ACM X-XXXXX-XX-X/XX/XX ...\$5.00}
 %%%
 
 \usepackage{multirow}
+\usepackage{xspace}
 
 \endinput
