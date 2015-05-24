@@ -277,6 +277,7 @@ bookmarksopen = {true}
 %%%
 %%%  Sample ACM Copyright Block
 %%%
+\floatstyle{plain}
 \newfloat{acmcr}{b}{acmcr}
 \newcommand{\AcmCopyright}{%
 \begin{acmcr}
