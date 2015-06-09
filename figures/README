@@ -1,0 +1,6 @@
+For nice-looking figures, use the included matplotlibrc.
+
+To output postscript for publications, you will need to distill to PDF, which
+may require installing xpdfbin: http://www.foolabs.com/xpdf/download.html
+
+This link is also useful: http://matplotlib.sourceforge.net/users/usetex.html

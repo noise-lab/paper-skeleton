@@ -1,0 +1,25 @@
+text.usetex: True
+font.family: serif
+font.sans-serif: Times
+font.size: 10
+#figure.figsize: 3.125, 1.93  # Golden ratio
+figure.figsize: 3.125, 1.56  # Squash for more space
+legend.fontsize: 8
+legend.fancybox: True
+axes.linewidth: 0.5
+axes.color_cycle: 348ABD, A60628, 7A68A6, 467821, CF4457, 188487, E24A33
+                # 348ABD : blue
+                # A60628 : red
+                # 7A68A6 : purple
+                # 467821 : green
+                # CF4457 : pink
+                # 188487 : turquoise
+                # E24A33 : orange
+patch.linewidth: 0.5
+lines.linewidth: 1
+grid.linewidth: 0.25
+xtick.major.width: 0.25
+xtick.minor.width: 0.25
+ytick.major.width: 0.25
+ytick.minor.width: 0.25
+ps.usedistiller: xpdf
