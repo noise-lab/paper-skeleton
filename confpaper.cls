@@ -23,6 +23,7 @@
 \newcommand{\CONFERENCE}{Conference}
 \newcommand{\PAGENUMBERS}{yes} % "yes" or "no"
 \newcommand{\COLOR}{yes}
+\newcommand{\GITINFO}{no}
 \newcommand{\showComments}{yes}
 \newcommand{\comment}[1]{}
 \newcommand{\onlyAbstract}{no}
@@ -171,6 +172,11 @@
   \pagestyle{plain}
 }{%
   \pagestyle{empty}
+}
+
+\ifthenelse{\equal{\GITINFO}{yes}}{%
+\RequirePackage[mark]{gitinfo2}
+}{%
 }
 
 %%%
