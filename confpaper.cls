@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{confpaper}[2014/6/17 conference paper latex class]
 
-%%% Opitons
+%%% Options
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
 
 %%% Process given options
