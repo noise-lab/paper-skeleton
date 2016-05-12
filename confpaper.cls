@@ -78,7 +78,7 @@
 %%%
 \RequirePackage{balance}
 \RequirePackage{tabulary}
-\RequirePackage{url}
+\RequirePackage[hyphens]{url}
 \RequirePackage{ifthen}
 
 \special{papersize=8.5in,11in}
