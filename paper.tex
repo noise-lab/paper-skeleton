@@ -1,64 +1,63 @@
-\pdfoutput=1
-\documentclass[10pt,twocolumn]{confpaper}
+\documentclass[conference=acm]{confpaper}
 
-%%%%%%%%%%%%%%%%%%%%  INCLUDES  %%%%%%%%%%%%%%%%%%%%%%%%%%
+% General
+% -------
+\usepackage{pdflscape}
 
-\graphicspath{ {./figures/} }
+% Bibliography
+% ------------
+\bibliography{paper}
 
-%%%%%%%%%%%%%%%%%%%%  LOCALS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands
+% --------
 
-\newcommand{\system}{{\em NetASM}}
+\pgfsetarrows{latex-latex}
+\tikzset{%
+  base/.style = {inner sep=5pt,
+                 text centered,
+                 thin,
+                 font=\rmfamily},
+  round/.style = {base,
+                  rectangle,
+                  rounded corners=1ex,
+                  draw=black,
+                  fill=gray!20,
+                  minimum height=0.35in}
+}
+
+%%%%%%%%%%%%%%%%%%%%  SPACE SAVINGS %%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[all=normal,wordspacing]{savetrees}
 
 %%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
 
-\date{}
-\title{\ttlfnt{
-\TITLE}}
-\author{
-\aufnt{\AUTHORS} \\
-\affaddr{Affiliation}
-}
+\title{Title}
+
+\author{ Authors }
+
+\titlespacing\section{0pt}{*1.8}{*1.1}
+\titlespacing\subsection{0pt}{*1.5}{*1.1}
+\titlespacing\subsection{0pt}{*1.3}{*0.8}
 
 %%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\maketitle
-
-%\AcmCopyright
-%\ToAppear
-
-\begin{sloppypar}
-
 \input{abstract}
 
-\ifthenelse{\equal{\onlyAbstract}{no}}{% !onlyAbstract
+\maketitle
 
 \input{introduction}
-
 \input{related}
+\label{lastpage}\input{conclusion}
 
-\balance\input{conclusion}\label{lastpage}
+\microtypesetup{protrusion=false}
 
-\end{sloppypar}
+\newpage
+\printbibliography
 
-%\vspace{-0.1in}
-%\section*{Acknowledgments}
-% Comments for people we need to acknowledge in the final version.
-
+\vfill
 \pagebreak
-
-\small
-%\setlength{\bibsep}{0pt}
-\setlength{\parskip}{-1pt}
-\setlength{\itemsep}{-1pt}
-% \footnotesize % SPACE
-\balance\bibliography{paper}
-\bibliographystyle{abbrv}
-%\bibliographystyle{abbrvnat_noaddr} % SPACE
-%\theendnotes % ENDNOTES
-}{% onlyAbstract
-}
 
 \end{document}
 
