@@ -72,10 +72,7 @@
                                  sffont=libertine,
                                  ttfont=inconsolata}{}
       % TODO geometry
-      \def\confpaper@columns{twocolumn}
-      \def\confpaper@fontsize{10pt}
-      \def\confpaper@papersize{letterpaper}
-     \or
+    \or
       \ClassInfo{\@classname}{Conference format is IEEE.}
       \presetkeys{confpaper.cls}{rmfont=times,
                                  sffont=helvetica,
@@ -590,9 +587,22 @@
       \@title
       \ifx\confpaper@subtitle\@empty\else
         \par\noindent{\LARGE\mdseries\confpaper@subtitle}
+      \fi%
+    \vskip.5\baselineskip
+    \large\mdseries\centering
+      \ifx\confpaper@authors\@empty\else
+        \par\noindent{\confpaper@authors}
+      \fi
+      \ifx\confpaper@affiliations\@empty\else
+        \vskip.25\baselineskip
+        \par\noindent{\confpaper@affiliations}
+      \fi
+      \ifx\confpaper@emails\@empty\else
+        \vskip.25\baselineskip
+        \par\noindent{\tt\confpaper@emails}
       \fi
     }%
-    \par\bigskip}
+    \par\smallskip}
 
   \newcount\@ACM@authorsperrow
   \@ACM@authorsperrow=0\relax
@@ -721,6 +731,18 @@
 \ifcase\confpaper@conference@nr\relax
   % ACM
   % ---
+   \RequirePackage[twoside=true,
+                   head=13pt,
+                   paperwidth=8.5in,
+                   paperheight=11in,
+                   includeheadfoot,
+                   columnsep=2pc,
+                   top=57pt,
+                   bottom=73pt,
+                   inner=54pt,
+                   outer=54pt,
+                   marginparwidth=2pc,
+                   heightrounded]{geometry}
   \def\maketitle{\confpaper@acm@maketitle}
 
   % TODO acknowledgements
