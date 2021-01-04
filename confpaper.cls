@@ -416,7 +416,7 @@
   \else
     \RequirePackage[tt=false, type1=true]{libertine}
   \fi
-  \RequirePackage[libertine]{newtxmath}
+  %\RequirePackage[libertine]{newtxmath}
 \fi
 
 \ifcase\confpaper@sffont@nr\relax
