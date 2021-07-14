@@ -233,6 +233,8 @@
 % General Formatting
 % ==================
 \RequirePackage{ifxetex}
+\RequirePackage{balance}
+
 
 % Fonts
 % -----

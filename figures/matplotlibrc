@@ -23,3 +23,7 @@ xtick.minor.width: 0.25
 ytick.major.width: 0.25
 ytick.minor.width: 0.25
 ps.usedistiller: xpdf
+
+# Type 3 Fonts
+pdf.fonttype = 42
+ps.fonttype = 42
