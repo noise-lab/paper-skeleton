@@ -25,17 +25,17 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
             # The root LaTeX file to be compiled
-            root_file: proposal.tex
+            root_file: paper.tex
       - name: store output
         uses: actions/upload-artifact@main
         with:
-          name: proposal.pdf
-          path: proposal.pdf
+          name: paper.pdf
+          path: paper.pdf
           retention-days: 7
       - name: dropbox upload
         uses: deka0106/upload-to-dropbox@v2
         with:
           dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: proposal.pdf
-          dest: /proposal-frontiers.pdf
+          src: paper.pdf
+          dest: /paper.pdf
           mode: overwrite
