@@ -10,7 +10,9 @@ A minimal latex paper skeleton file for writing conference papers. The Makefile 
 * Every edit is version controlled. With pull requests, every edit is reviewed by one other person than the person who made the edit.
 * Issues with the project and paper can be tracked with the Github issue tracker and managed via pull requests. Discussions can be easily organized and tracked by issue.
 * Issues can be assigned to specific people, who can easily then find their tasks.
+* It is useful pedagogically, and it also avoids needless back-and-forth: While someone can simply push edits into master, it is easy to miss edits someone else might be making. Seeing other people's edits can be a useful learning experience, and if you see one of your edits changed or reverted, you can ask why. Maybe people have different style conventions (title case or sentence case? punctuation inside or outside of the quote? let's talk about it...). 
 * Slack integration allows collaborators to easily be notified of any changes. (recommended Slack integration: `/github subscribe <repo> issues pulls commits releases deployments comments branches commits:*` 
+* It reduces chaos. It might seem "faster" to have everyone simultaneously editing everything in a Google doc or and Overleaf doc. But, the editing process is much less methodical (see above), thus resulting in chaos, an inconsistent end-product, and general stress, since nobody really has a complete view of the paper. The process below ensures that edits are methodical, track issues that collaborators have all discussed and seen, and are reviewed by the group (which is good for cohesion, consensus, and avoiding introduction of errors into the process with hasty editing).
 
 **Editing.** Here is the rough process for editing via Github.
 1. Create an issue on Github indicating the nature of your edit (e.g., "reorganize introduction", "align figures", "copy edit pass").
