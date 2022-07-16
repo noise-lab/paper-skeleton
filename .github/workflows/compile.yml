@@ -32,10 +32,3 @@ jobs:
           name: paper.pdf
           path: paper.pdf
           retention-days: 7
-      - name: dropbox upload
-        uses: deka0106/upload-to-dropbox@v2
-        with:
-          dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          src: paper.pdf
-          dest: /paper.pdf
-          mode: overwrite
