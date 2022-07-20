@@ -38,8 +38,6 @@ A minimal latex paper skeleton file for writing conference papers. The Makefile 
 
 ### First Rule: Don't use it.
 
-The first rule is: Don't use Overleaf! 
-
 Let's first talk about why you should avoid using Overleaf. Why avoid Overleaf? 
 
 * The web-based editor is highly sub-optimal compared to full-featured text editors (which you can customize to your liking), and you're much better off learning to use a real editor on your local machine. Plus, you'll be able to edit offline when you're traveling, when network connectivity fails, or when Overleaf invariably goes offline hours before a deadline.
@@ -51,6 +49,28 @@ The second rule is: If you have to use Overleaf (e.g., because you're a glutton 
 
 Note that there is a copy of this paper skeleton template already [as an Overleaf document](https://www.overleaf.com/read/yvcwdysjjkht). We strongly prefer git to Overleaf, but if you must start with an Overleaf skeleton, at least start with a good one.
 
+#### Option 1: Git Bridge Synchronization 
+
+**This option is preferred if you are a Github user who is trying to collaborate with someone who insists on using overleaf.**
+
+These instructions assume that you have (or create) a Github repository first and want to merge it into an Overleaf project.
+
+1. Create a github repository for your paper as normal.
+2. [Import your github repository into Overleaf](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub#How_do_I_log_in_to_Overleaf_through_Git.3F).
+**Note:** Because github now uses "main" instead of "master" for default, and there is no way to change Overleaf's branch name (which is "master"), these instructions are slightly broken. You will have to modify these instructions slightly: In the last step, instead type `git push overleaf main:master`.
+3. I recommend creating an "overleaf" branch that you can pull Overleaf edits into separately, and then merging with your local main branch. Example:
+  - `git checkout -b overleaf` (create a separate branch for overleaf)
+  - `git merge origin main` (merge the main from the remote origin into your local overleaf branch)
+  - `git push -u overleaf overleaf:master` (push the local overleaf branch to Overleaf, and have your local `overleaf` branch track edits on Overleaf.)
+4. You can set up your main branch to track a Github remote:
+  - `git checkout main`
+  - `git push -u origin main`
+
+Now you have a local branch `overleaf` that tracks and pushes to Overleaf, and a local branch `main` that you can use as normal.  You can of course do this with a single local branch, but because Overleaf edits are constant, and non-atomic, it's possible and likely that your pull from overleaf at your moment of choosing is unlikely to compile. You may thus find it easier to simply keep the branches separate and occasionally merge in the Overleaf branch, as in the above instructions.
+
+#### Option 2: Github Synchronization
+
+**This option is probably the way to go if you have to collaborate with someone who is using Overleaf as the primary document.**
 
 1. **Create a github repository from Overleaf.**  *Make sure the repo is private* 
 2. Once you have a repository sync'd to an Overleaf project, Overleaf's menu->github->push/pull will allow you to use overleaf to push/pull to GitHub.  (Note that you have to manually do this. Before adding new content to your Overleaf document, don't forget to always check if there is new content to pull.
